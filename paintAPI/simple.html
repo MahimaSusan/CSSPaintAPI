@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .element {
+        background-image: paint(my-paint-worklet);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="element">hello</div>
+    <script>
+    CSS.paintWorklet.addModule('worklet.js');
+    </script>
+</body>
+
+</html>
