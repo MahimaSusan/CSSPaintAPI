@@ -1,5 +1,8 @@
 // checkerboard.js
 class CheckerboardPainter {
+
+
+  static get inputProperties() { return ['--checkerboard-spacing', '--checkerboard-size']; }
   paint(ctx, geom, properties) {
     // Use `ctx` as if it was a normal canvas
     const colors = ['red', 'green', 'blue'];
