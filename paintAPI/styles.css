@@ -1,0 +1,52 @@
+@supports (background: paint(id)) {
+  /* Paint API supported */
+  .css-check.pass {
+    display: block;
+  }
+}
+
+@supports not (background: paint(id)) {
+  /* Paint API not supported */
+  .css-check.fail {
+    display: block;
+  }
+}
+
+/* the rest of this is just for looks */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 0;
+  color: #fff;
+  background: linear-gradient(to bottom right, #adb5bd, #f8f9fa);
+  font: 2rem/1 'Mukta Mahee', sans-serif;
+}
+
+.pass, .fail {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid currentColor;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pass {
+  color: #2b8a3e;
+  background-color: #ebfbee;
+}
+
+.fail {
+  color: #c92a2a;
+  background-color: #ffe3e3;
+}
+
+.fas {
+  margin-right: 10px;
+}
