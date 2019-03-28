@@ -14,7 +14,7 @@ class CheckerboardPainter {
                 const color = colors[(x + y) % colors.length];
                 ctx.beginPath();
                 ctx.fillStyle = color;
-                ctx.rect(x * (size + spacing), y * (size +spacing), size, size);
+                ctx.rect(x * (size + spacing), y * (size + spacing), size, size);
                 ctx.fill();
             }
         }
@@ -30,45 +30,45 @@ registerPaint('checkerboard', CheckerboardPainter);
 
 
 class Shape {
-  paint(ctx, geom, properties) {
-    
-    let x = geom.width/2;
-    let y = geom.height/2;
+    paint(ctx, geom, properties) {
 
-    ctx.strokeStyle = 'white';
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.arc(x, y, 50, 0, 2*Math.PI);
-    ctx.stroke();
-    ctx.closePath();
-    
-  }
+        let x = geom.width / 2;
+        let y = geom.height / 2;
+
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.arc(x, y, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+
+    }
 }
 
 // Register our class under a specific name
 registerPaint('awesomePattern', Shape);
 
 
- class SuperUnderline {
+class SuperUnderline {
     console.log("uehdrdfr")
     paint(ctx, size) {
-     // random function can live outside of the class
-const getRandom = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
-// values to set for the paint
-const numUnderlines = 3
-const spread = 20
-ctx.lineWidth = 3
-ctx.strokeStyle = ‘red’
-for (let i = 0; i < numUnderlines; i++) {
-  ctx.beginPath()
-  ctx.moveTo(0, getRandom(0, spread) + size.height/1.4)
-  ctx.lineTo(size.width, getRandom(0, spread) + size.height/1.4)
-  ctx.stroke()
-}
+        // random function can live outside of the class
+        const getRandom = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // values to set for the paint
+        const numUnderlines = 3
+        const spread = 20
+        ctx.lineWidth = 3
+        ctx.strokeStyle = "#000"
+        for (let i = 0; i < numUnderlines; i++) {
+            ctx.beginPath()
+            ctx.moveTo(0, getRandom(0, spread) + size.height / 1.4)
+            ctx.lineTo(size.width, getRandom(0, spread) + size.height / 1.4)
+            ctx.stroke()
+        }
     }
-  }
+}
 
 
-  registerPaint('superUnderline', SuperUnderline)
+registerPaint('superUnderline', SuperUnderline)
