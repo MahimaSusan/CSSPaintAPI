@@ -26,8 +26,10 @@ h1:after {
 ul {
   text-align: left;
   line-height: 50px;
+  list-style: none;
 }
-.element {
+.element:after {
+  content: "";
   background-image: paint(my-paint-worklet);
 }
 .checkBoxes {
