@@ -59,8 +59,8 @@ class SuperUnderline {
         }
         // values to set for the paint
         const numUnderlines = 3;
-        const spread = 30;
-        ctx.lineWidth = 3;
+        const spread = 20;
+        ctx.lineWidth = 1;
         ctx.strokeStyle = 'black';
         for (let i = 0; i < numUnderlines; i++) {
             ctx.beginPath();
