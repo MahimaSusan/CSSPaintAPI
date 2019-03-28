@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Paint API and polyfill</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="icon" type="image/ jpeg" href="images/favicon.jpeg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+<h1>Hello World</h1>
+<script>
+  if ('paintWorklet' in CSS) {
+    CSS.paintWorklet.addModule('./worklet.js');
+  }
+</script>
+</body>
+</html>
