@@ -50,6 +50,7 @@ registerPaint('awesomePattern', Shape);
 
 
  class SuperUnderline {
+    console.log("uehdrdfr")
     paint(ctx, size) {
      // random function can live outside of the class
 const getRandom = (min, max) => {
