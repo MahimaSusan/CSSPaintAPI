@@ -27,6 +27,9 @@ ul {
   text-align: left;
   line-height: 50px;
 }
+.element {
+  background-image: paint(my-paint-worklet);
+}
 .checkBoxes {
   --checkerboard-spacing: 10;
   --checkerboard-size: 32;
