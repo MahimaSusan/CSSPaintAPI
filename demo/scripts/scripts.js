@@ -63,10 +63,10 @@ class SuperUnderline {
         ctx.lineWidth = 3;
         ctx.strokeStyle = 'black';
         for (let i = 0; i < numUnderlines; i++) {
-            ctx.beginPath()
-            ctx.moveTo(0, getRandom(0, spread) + size.height / 1.4)
-            ctx.lineTo(size.width, getRandom(0, spread) + size.height / 1.4)
-            ctx.stroke()
+            ctx.beginPath();
+            ctx.moveTo(0, getRandom(0, spread) + size.height / 1.4);
+            ctx.lineTo(size.width, getRandom(0, spread) + size.height / 1.4);
+            ctx.stroke();
         }
     }
 }
