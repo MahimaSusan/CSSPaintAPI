@@ -28,9 +28,18 @@ ul {
   line-height: 50px;
   list-style: none;
 }
+.element {
+  position: relative;
+  padding-left: 20px;
+}
 .element:after {
   content: "";
   background-image: paint(my-paint-worklet);
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  top: 20px;
 }
 .checkBoxes {
   --checkerboard-spacing: 10;
