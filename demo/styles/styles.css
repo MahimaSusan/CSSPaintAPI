@@ -7,7 +7,10 @@ body {
 h1 {
 	font-weight: 300;
 }
-div {
+h1 {
+    background: paint(superUnderline);
+  }
+.checkBoxes {
   	--checkerboard-spacing: 10;
     --checkerboard-size: 32;
     background-image: paint(checkerboard);
