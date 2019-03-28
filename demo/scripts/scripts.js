@@ -76,10 +76,8 @@ registerPaint('underlines', SuperUnderline)
 
 class MyWorklet {
     paint(ctx) {
-        const height = '100%';
-        const width = '100%';
         ctx.fillStyle = 'green';
-        ctx.fillRect(0, 0, height, width);
+        ctx.fillRect(0, 0, 100%, 100%);
     }
 }
 registerPaint('my-paint-worklet', MyWorklet);
