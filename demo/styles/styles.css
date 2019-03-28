@@ -7,9 +7,11 @@ body {
 h1 {
 	font-weight: 300;
 }
-h1 {
+@supports (background: paint(something)) {
+  h1 {
     background: paint(superUnderline);
   }
+}
 .checkBoxes {
   	--checkerboard-spacing: 10;
     --checkerboard-size: 32;

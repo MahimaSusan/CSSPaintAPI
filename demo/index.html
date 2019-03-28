@@ -14,6 +14,9 @@
     <h1>CSS Paint API and polyfill</h1>
     <div class="checkBoxes"></div>
     <script>
+    	  if ('paintWorklet' in CSS) {
+    CSS.paintWorklet.addModule('./worklet.js');
+  }
     CSS.paintWorklet.addModule('scripts/underline.js')
     CSS.paintWorklet.addModule('scripts/scripts.js');
     </script>
