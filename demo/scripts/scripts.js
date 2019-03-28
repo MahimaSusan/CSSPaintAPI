@@ -74,13 +74,13 @@ class SuperUnderline {
 
 registerPaint('underlines', SuperUnderline)
 
-// class MyWorklet {
-//     paint(ctx) {
-//         ctx.fillStyle = 'green';
-//         ctx.fillRect(0, 0, 20, 20);
-//     }
-// }
-// registerPaint('my-paint-worklet', MyWorklet);
+class MyWorklet {
+    paint(ctx) {
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, 0, 20, 20);
+    }
+}
+registerPaint('my-paint-worklet', MyWorklet);
 
 // class BarChartPainter {
 //     paint(ctx, {width, height}, props) {
