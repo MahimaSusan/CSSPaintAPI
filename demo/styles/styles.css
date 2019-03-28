@@ -1,8 +1,11 @@
 body {
 	font-family: 'Poppins', sans-serif;
-	border: 1px solid #000;
+  border: 1px solid #000;
   height: 100vh;
   text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  padding: 60px;
 }
 h1 {
   font-weight: 300;
@@ -27,6 +30,7 @@ ul {
   text-align: left;
   line-height: 50px;
   list-style: none;
+  padding: 60px 0;
 }
 .element {
   position: relative;
