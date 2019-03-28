@@ -23,6 +23,10 @@ h1:after {
   border: 0;
   padding-top: 90px;
 }
+ul {
+  text-align: left;
+  line-height: 50px;
+}
 .checkBoxes {
   --checkerboard-spacing: 10;
   --checkerboard-size: 32;
