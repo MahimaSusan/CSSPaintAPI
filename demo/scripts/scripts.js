@@ -50,8 +50,9 @@ registerPaint('awesomePattern', Shape);
 
 
 class SuperUnderline {
-    console.log("uehdrdfr")
+
     paint(ctx, size) {
+        console.log("uehdrdfr")
         // random function can live outside of the class
         const getRandom = (min, max) => {
             return Math.floor(Math.random() * (max - min + 1)) + min
@@ -60,7 +61,7 @@ class SuperUnderline {
         const numUnderlines = 3
         const spread = 20
         ctx.lineWidth = 3
-        ctx.strokeStyle = "#000"
+        ctx.strokeStyle = ‘red’
         for (let i = 0; i < numUnderlines; i++) {
             ctx.beginPath()
             ctx.moveTo(0, getRandom(0, spread) + size.height / 1.4)
@@ -71,4 +72,4 @@ class SuperUnderline {
 }
 
 
-registerPaint('superUnderline', SuperUnderline)
+registerPaint('underlines', SuperUnderline)
