@@ -73,3 +73,27 @@ class SuperUnderline {
 
 
 registerPaint('underlines', SuperUnderline)
+
+class BarChartPainter {
+    paint(ctx, {width, height}, props) {
+      const gap = parseInt(
+        (props.get('--bar-gap') || 10).toString(),
+        10
+      );
+      const data = this._parseData(props.get('--bar-map'));
+      const max = this._getMax(data);
+      const multiplier = height / max;
+      const barW = (width - (gap * (data.length - 1))) / data.length;
+  
+      for (let i = 0; i < data.length; i++) {
+        const x = i * (barW + gap);
+        const barHeight = data[i].value * multiplier;
+        const y = height - barHeight;
+  
+        ctx.fillStyle = data[i].color;
+  
+        ctx.fillRect(x, y, barW, barHeight);
+      }
+    }
+  }
+  registerPaint('bar-chart', BarChartPainter);
