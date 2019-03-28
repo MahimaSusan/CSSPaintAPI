@@ -77,7 +77,7 @@ registerPaint('underlines', SuperUnderline)
 class MyWorklet {
     paint(ctx) {
         ctx.fillStyle = 'green';
-        ctx.fillRect(0, 0, 20, 20);
+        ctx.fillRect(0, 0, 5, 5);
     }
 }
 registerPaint('my-paint-worklet', MyWorklet);
