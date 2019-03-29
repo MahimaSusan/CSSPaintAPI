@@ -30,7 +30,7 @@ registerPaint('checkerboard', CheckerboardPainter);
 
 
 class Shape {
-    paint(ctx, geom, properties) {
+    paint(ctx, geom) {
 
         let x = geom.width / 2;
         let y = geom.height / 2;
