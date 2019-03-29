@@ -10,7 +10,7 @@ class SuperUnderline {
         const numUnderlines = 3;
         const spread = 30;
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'black';
+        ctx.strokeStyle = '#da3a36';
         for (let i = 0; i < numUnderlines; i++) {
             ctx.beginPath();
             ctx.moveTo(0, getRandom(0, spread) + size.height / 5);
@@ -25,7 +25,7 @@ registerPaint('underlines', SuperUnderline)
 
 class MyWorklet {
     paint(ctx) {
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = '#da3a36';
         ctx.fillRect(0, 0, 5, 5);
     }
 }
@@ -37,7 +37,7 @@ class Shape {
         let x = geom.width / 2;
         let y = geom.height / 2;
 
-        ctx.strokeStyle = 'white';
+        ctx.strokeStyle = '#da3a36';
         ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI);
