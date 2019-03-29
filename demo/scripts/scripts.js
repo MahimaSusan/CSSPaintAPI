@@ -1,6 +1,6 @@
 class SuperUnderline {
 
-    paint(ctx, size) {
+    paint(ctx, geom) {
         console.log("uehdrdfr")
         // random function can live outside of the class
         const getRandom = (min, max) => {
@@ -13,8 +13,8 @@ class SuperUnderline {
         ctx.strokeStyle = '#da3a36';
         for (let i = 0; i < numUnderlines; i++) {
             ctx.beginPath();
-            ctx.moveTo(0, getRandom(0, spread) + size.height / 5);
-            ctx.lineTo(size.width, getRandom(0, spread) + size.height / 5);
+            ctx.moveTo(0, getRandom(0, spread) + geom.height / 5);
+            ctx.lineTo(geom.width, getRandom(0, spread) + geom.height / 5);
             ctx.stroke();
         }
     }
