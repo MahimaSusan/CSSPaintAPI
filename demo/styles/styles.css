@@ -58,6 +58,17 @@ ul {
   height: 150px;
   background-color: #fff;
   background-image: paint(awesomePattern);
+  position: relative;
+}
+#screen:after {
+    background-image: url(images/favicon.jpeg);
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    background-size: cover;
+    content: "";
+    left: 44px;
+    top: 42px;
 }
 .bars {
   height: 700px;
