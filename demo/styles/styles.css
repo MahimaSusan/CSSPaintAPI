@@ -61,7 +61,7 @@ ul {
   position: relative;
 }
 #screen:after {
-  background-image: url(images/favicon.jpeg);
+  background-image: url(../images/favicon.jpeg);
   width: 65px;
   height: 65px;
   position: absolute;
