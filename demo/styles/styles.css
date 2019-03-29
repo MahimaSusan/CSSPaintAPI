@@ -59,6 +59,7 @@ ul {
   background-color: #fff;
   background-image: paint(awesomePattern);
   position: relative;
+  margin: 0 auto;
 }
 #screen:after {
   background-image: url(../images/favicon.jpeg);
