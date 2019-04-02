@@ -62,7 +62,7 @@ ul {
   position: relative;
   margin: 0 auto;
 }
-/* #screen:after {
+#screen:after {
   background-image: url(../images/favicon.jpeg);
   width: 65px;
   height: 65px;
@@ -71,7 +71,7 @@ ul {
   content: "";
   left: 44px;
   top: 42px;
-} */
+}
 .bars {
   height: 700px;
   max-height: 50vh;
