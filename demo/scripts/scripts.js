@@ -43,7 +43,7 @@ class Shape {
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI, false);
         ctx.clip();
-        ctx.drawImage(styleMap.get('--profile-image'));
+        ctx.drawImage(styleMap.get('--profile-image'), 10, 10);
         ctx.restore();
         ctx.stroke();
         ctx.closePath();
