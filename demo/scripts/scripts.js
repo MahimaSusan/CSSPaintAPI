@@ -38,7 +38,7 @@ class Shape {
         ctx.strokeStyle = '#da3a36';
         ctx.lineWidth = 4;
         ctx.beginPath();
-        ctx.arc(x, y, 50, 0, 2 * Math.PI, false);
+        ctx.arc(x, y, 50, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.closePath();
     }
