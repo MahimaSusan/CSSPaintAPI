@@ -32,6 +32,7 @@ class MyWorklet {
 registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
+  static get inputProperties() { return ['--profile-image']; }
     paint(ctx, geom, styleMap, arg) {
 
         let x = geom.width / 2;
