@@ -32,7 +32,7 @@ class MyWorklet {
 registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
-    paint(ctx, geom, styleMap) {
+    paint(ctx, geom, styleMap, arg) {
 
         let x = geom.width / 2;
         let y = geom.height / 2;
