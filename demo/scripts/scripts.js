@@ -33,7 +33,7 @@ registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
   static get inputProperties() { return ['--profile-image']; }
-    paint(ctx, geom, styleMap, arg) {
+    paint(ctx, geom, styleMap) {
 
         let x = geom.width / 2;
         let y = geom.height / 2;
@@ -43,7 +43,7 @@ class Shape {
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI, false);
         ctx.clip();
-        ctx.drawImage(styleMap.get('--profile-image'), 10, 10);
+        ctx.drawImage(styleMap.get('--profile-image'));
         ctx.restore();
         ctx.stroke();
         ctx.closePath();
