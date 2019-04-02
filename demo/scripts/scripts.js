@@ -32,7 +32,7 @@ class MyWorklet {
 registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
-    paint(ctx, geom) {
+    paint(ctx, geom, styleMap) {
 
         let x = geom.width / 2;
         let y = geom.height / 2;
@@ -41,6 +41,7 @@ class Shape {
         ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI);
+        ctx.drawImage(styleMap.get('--profile-image'));
         ctx.stroke();
         ctx.closePath();
 
@@ -80,7 +81,6 @@ class CheckerboardPainter {
 // Register our class under a specific name
 registerPaint('checkerboard', CheckerboardPainter);
 
-<<<<<<< HEAD
 class BarChartPainter {
     static get inputProperties() {
       return [
@@ -154,7 +154,6 @@ class BarChartPainter {
     }
   }
   registerPaint('bar-chart', BarChartPainter);
-=======
 // class BarChartPainter {
 //     paint(ctx, {width, height}, props) {
 //       const gap = parseInt(
@@ -178,4 +177,3 @@ class BarChartPainter {
 //     }
 //   }
 //   registerPaint('bar-chart', BarChartPainter);
->>>>>>> ee0f21d4b0b4c0a223acda0467ab51813a794788

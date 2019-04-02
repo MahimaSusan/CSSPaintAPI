@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   padding: 60px;
 }
-h1 {
+h1,h2 {
   font-weight: 300;
   position: relative;
   width: 500px;
@@ -58,10 +58,11 @@ ul {
   height: 150px;
   background-color: #fff;
   background-image: paint(awesomePattern);
+  --profile-image: url("../images/favicon.jpeg");
   position: relative;
   margin: 0 auto;
 }
-#screen:after {
+/* #screen:after {
   background-image: url(../images/favicon.jpeg);
   width: 65px;
   height: 65px;
@@ -70,7 +71,7 @@ ul {
   content: "";
   left: 44px;
   top: 42px;
-}
+} */
 .bars {
   height: 700px;
   max-height: 50vh;
