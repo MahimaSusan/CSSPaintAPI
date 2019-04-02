@@ -32,7 +32,7 @@ class MyWorklet {
 registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
-    paint(ctx, geom, styleMap) {
+    paint(ctx, geom) {
         let x = geom.width / 2;
         let y = geom.height / 2;
         ctx.strokeStyle = '#da3a36';
@@ -41,8 +41,6 @@ class Shape {
         ctx.arc(x, y, 50, 0, 2 * Math.PI, false);
         ctx.stroke();
         ctx.closePath();
-        drawBadge(ctx);
-
     }
 }
 
