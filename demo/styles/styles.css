@@ -1,29 +1,75 @@
 body {
 	font-family: 'Poppins', sans-serif;
-	border: 1px solid #000;
-    height: 100vh;
-    text-align: center;
+  border: 1px solid #000;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  padding: 60px;
 }
 h1 {
-	font-weight: 300;
-	background-image: paint(underlines);
-	width: 75%;
-	margin: 0 auto;
+  font-weight: 300;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+h1:after {
+	content: "";
+  font-weight: 300;
+  background-image: paint(underlines);
+  width: 75%;
+  margin: 0 auto;
+  width: inherit;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  border: 0;
+  padding-top: 90px;
+}
+ul {
+  text-align: left;
+  line-height: 50px;
+  list-style: none;
+  padding: 60px 0;
+}
+.element {
+  position: relative;
+  padding-left: 20px;
+}
+.element:after {
+  content: "";
+  background-image: paint(my-paint-worklet);
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  top: 20px;
 }
 .checkBoxes {
-  	--checkerboard-spacing: 10;
-    --checkerboard-size: 32;
-    background-image: paint(checkerboard);
-    height: 500px;
-    width: 500px;
+  --checkerboard-spacing: 10;
+  --checkerboard-size: 32;
+  background-image: paint(checkerboard);
+  height: 500px;
+  width: 500px;
  }
  #screen {
   box-sizing: border-box;
   margin: 10px; padding: 0px;
-  width: calc(100vw - 20px);
-  height: calc(100vh - 20px);
-  background-color: #111;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
   background-image: paint(awesomePattern);
+  position: relative;
+  margin: 0 auto;
+}
+#screen:after {
+  background-image: url(../images/favicon.jpeg);
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  background-size: cover;
+  content: "";
+  left: 44px;
+  top: 42px;
 }
 .bars {
   height: 700px;

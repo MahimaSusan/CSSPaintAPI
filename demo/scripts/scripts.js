@@ -1,3 +1,59 @@
+class SuperUnderline {
+
+    paint(ctx, geom) {
+        console.log("uehdrdfr")
+        // random function can live outside of the class
+        const getRandom = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // values to set for the paint
+        const numUnderlines = 3;
+        const spread = 30;
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = '#da3a36';
+        for (let i = 0; i < numUnderlines; i++) {
+            ctx.beginPath();
+            ctx.moveTo(0, getRandom(0, spread) + geom.height / 5);
+            ctx.lineTo(geom.width, getRandom(0, spread) + geom.height / 5);
+            ctx.stroke();
+        }
+    }
+}
+
+
+registerPaint('underlines', SuperUnderline)
+
+class MyWorklet {
+    paint(ctx) {
+        ctx.fillStyle = '#da3a36';
+        ctx.fillRect(0, 0, 5, 5);
+    }
+}
+registerPaint('my-paint-worklet', MyWorklet);
+
+class Shape {
+    paint(ctx, geom) {
+
+        let x = geom.width / 2;
+        let y = geom.height / 2;
+
+        ctx.strokeStyle = '#da3a36';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.arc(x, y, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+
+    }
+}
+
+// Register our class under a specific name
+registerPaint('awesomePattern', Shape);
+
+
+
+
+
 // checkerboard.js
 class CheckerboardPainter {
 
@@ -24,54 +80,7 @@ class CheckerboardPainter {
 // Register our class under a specific name
 registerPaint('checkerboard', CheckerboardPainter);
 
-
-
-
-
-
-class Shape {
-    paint(ctx, geom, properties) {
-
-        let x = geom.width / 2;
-        let y = geom.height / 2;
-
-        ctx.strokeStyle = 'white';
-        ctx.lineWidth = 4;
-        ctx.beginPath();
-        ctx.arc(x, y, 50, 0, 2 * Math.PI);
-        ctx.stroke();
-        ctx.closePath();
-
-    }
-}
-
-// Register our class under a specific name
-registerPaint('awesomePattern', Shape);
-
-
-class SuperUnderline {
-
-    paint(ctx, size) {
-        console.log("uehdrdfr")
-        // random function can live outside of the class
-        const getRandom = (min, max) => {
-            return Math.floor(Math.random() * (max - min + 1)) + min
-        }
-        // values to set for the paint
-        const numUnderlines = 3;
-        const spread = 30;
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = 'black';
-        for (let i = 0; i < numUnderlines; i++) {
-            ctx.beginPath();
-            ctx.moveTo(0, getRandom(0, spread) + size.height / 5);
-            ctx.lineTo(size.width, getRandom(0, spread) + size.height / 5);
-            ctx.stroke();
-        }
-    }
-}
-
-
+<<<<<<< HEAD
 class BarChartPainter {
     static get inputProperties() {
       return [
@@ -145,3 +154,28 @@ class BarChartPainter {
     }
   }
   registerPaint('bar-chart', BarChartPainter);
+=======
+// class BarChartPainter {
+//     paint(ctx, {width, height}, props) {
+//       const gap = parseInt(
+//         (props.get('--bar-gap') || 10).toString(),
+//         10
+//       );
+//       const data = this._parseData(props.get('--bar-map'));
+//       const max = this._getMax(data);
+//       const multiplier = height / max;
+//       const barW = (width - (gap * (data.length - 1))) / data.length;
+
+//       for (let i = 0; i < data.length; i++) {
+//         const x = i * (barW + gap);
+//         const barHeight = data[i].value * multiplier;
+//         const y = height - barHeight;
+
+//         ctx.fillStyle = data[i].color;
+
+//         ctx.fillRect(x, y, barW, barHeight);
+//       }
+//     }
+//   }
+//   registerPaint('bar-chart', BarChartPainter);
+>>>>>>> ee0f21d4b0b4c0a223acda0467ab51813a794788
