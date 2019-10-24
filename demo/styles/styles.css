@@ -72,7 +72,7 @@ ul {
   left: 44px;
   top: 42px;
 }
-.barChart {
+/*.barChart {
   height: 700px;
   max-height: 50vh;
   padding: 30px 10px 0;
@@ -80,19 +80,19 @@ ul {
   --bar-gap: 40;
   --bar-map: 50 #666, 70 salmon, 35 #9ee7a1, 15 #fff, 25 orange;
   background: #111 paint(bar-chart);
-}
-.fancy {
+}*/
+.marker {
   background-image: paint(headerHighlight);
 }
-h1 {
+.marker:first-child {
   --boxColor: hsla(155, 90%, 60%, 1.0);
   --widthSubtractor: 20;
 }
-h3 {
-  --boxColor: hsla(155, 90%, 60%, 1.0);
+.marker:nth-child(2) {
+  --boxColor: hsla(255, 90%, 60%, 0.5);
   --widthSubtractor: 20;
 }
-h6 {
-  --boxColor: hsla(155, 90%, 60%, 1.0);
+.marker:last-child {
+  --boxColor: hsla(355, 90%, 60%, 0.3);
   --widthSubtractor: 20;
 }
