@@ -1,27 +1,30 @@
-class SuperUnderline {
-
-    paint(ctx, geom) {
-        console.log("uehdrdfr")
-        // random function can live outside of the class
-        const getRandom = (min, max) => {
-            return Math.floor(Math.random() * (max - min + 1)) + min
-        }
-        // values to set for the paint
-        const numUnderlines = 3;
-        const spread = 30;
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = '#da3a36';
-        for (let i = 0; i < numUnderlines; i++) {
-            ctx.beginPath();
-            ctx.moveTo(0, getRandom(0, spread) + geom.height / 5);
-            ctx.lineTo(geom.width, getRandom(0, spread) + geom.height / 5);
-            ctx.stroke();
-        }
-    }
+const getRandom = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
+if (typeof registerPaint !== 'undefined') {
+  class SuperUnderline {
+    static get inputProperties() {
+      return ['--underlineNumber', '--underlineColor', '--underlineSpread', '--underlineWidth']
+    }
+    paint(ctx, size, properties) {
+       const numUnderlines = properties.get('--underlineNumber')
+       const lineWidth = properties.get('--underlineWidth')
+       const color = properties.get('--underlineColor')
+       const spread = properties.get('--underlineSpread')
+       ctx.lineWidth = lineWidth
+       ctx.strokeStyle = color
+for (let i = 0; i < numUnderlines; i++) {
+        ctx.beginPath()
+        ctx.moveTo(0, getRandom(0, spread) + size.height/1.4)
+        ctx.lineTo(size.width, getRandom(0, spread) + size.height/1.4)
+        ctx.stroke()
+      }
+    }
+  }
+  registerPaint('superUnderline', SuperUnderline)
 
 
-registerPaint('underlines', SuperUnderline)
+// registerPaint('underlines', SuperUnderline)
 
 class MyWorklet {
     paint(ctx) {
