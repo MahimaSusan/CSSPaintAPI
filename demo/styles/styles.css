@@ -96,17 +96,3 @@ ul {
   --boxColor: hsla(355, 90%, 60%, 0.3);
   --widthSubtractor: 20;
 }
-@supports (background: paint(something)) {
-  h1 {
-    /* 
-      Optionally set property values. 
-      This can be done at root or local scope 
-    */
-    --underlineNumber: 5; /* default: 3 */
-    --underlineColor: #8266ff; /* default: black */
-    --underlineSpread: 15; /* default: 20 */
-    --underlineWidth: 1; /* default: 2 */
-    background: paint(superUnderline);
-    line-height: 1.5;
-  }
-}
