@@ -33,17 +33,14 @@ registerPaint('my-paint-worklet', MyWorklet);
 
 class Shape {
     paint(ctx, geom) {
-
         let x = geom.width / 2;
         let y = geom.height / 2;
-
         ctx.strokeStyle = '#da3a36';
         ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.closePath();
-
     }
 }
 
@@ -103,3 +100,4 @@ class BarChartPainter {
     }
   }
   registerPaint('bar-chart', BarChartPainter);
+
