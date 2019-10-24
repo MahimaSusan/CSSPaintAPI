@@ -101,3 +101,25 @@ class BarChartPainter {
   }
   registerPaint('bar-chart', BarChartPainter);
 
+  //Custom Properties
+
+  class HeaderHighlight {
+
+
+    static get inputProperties() { return ['--boxColor', '--widthSubtractor']; }
+
+    paint(ctx, size, props) {
+    /*
+       ctx -> drawing context
+       size -> paintSize: width and height
+       props -> properties: get() method
+    */
+
+    ctx.fillStyle = props.get('--boxColor');
+    ctx.fillRect(0, size.height/3, size.width*0.4 - props.get('--widthSubtractor'), size.height*0.6);
+  }
+}
+
+// Register our class under a specific name
+registerPaint('headerHighlight', HeaderHighlight);
+

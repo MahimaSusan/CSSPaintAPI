@@ -81,3 +81,18 @@ ul {
   --bar-map: 50 #666, 70 salmon, 35 #9ee7a1, 15 #fff, 25 orange;
   background: #111 paint(bar-chart);
 }
+.fancy {
+  background-image: paint(headerHighlight);
+}
+h1 {
+  --boxColor: hsla(155, 90%, 60%, 1.0);
+  --widthSubtractor: 20;
+}
+h3 {
+  --boxColor: hsla(155, 90%, 60%, 1.0);
+  --widthSubtractor: 20;
+}
+h6 {
+  --boxColor: hsla(155, 90%, 60%, 1.0);
+  --widthSubtractor: 20;
+}
