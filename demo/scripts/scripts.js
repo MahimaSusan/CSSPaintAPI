@@ -80,26 +80,26 @@ class CheckerboardPainter {
 // Register our class under a specific name
 registerPaint('checkerboard', CheckerboardPainter);
 
-// class BarChartPainter {
-//     paint(ctx, {width, height}, props) {
-//       const gap = parseInt(
-//         (props.get('--bar-gap') || 10).toString(),
-//         10
-//       );
-//       const data = this._parseData(props.get('--bar-map'));
-//       const max = this._getMax(data);
-//       const multiplier = height / max;
-//       const barW = (width - (gap * (data.length - 1))) / data.length;
+class BarChartPainter {
+    paint(ctx, {width, height}, props) {
+      const gap = parseInt(
+        (props.get('--bar-gap') || 10).toString(),
+        10
+      );
+      const data = this._parseData(props.get('--bar-map'));
+      const max = this._getMax(data);
+      const multiplier = height / max;
+      const barW = (width - (gap * (data.length - 1))) / data.length;
 
-//       for (let i = 0; i < data.length; i++) {
-//         const x = i * (barW + gap);
-//         const barHeight = data[i].value * multiplier;
-//         const y = height - barHeight;
+      for (let i = 0; i < data.length; i++) {
+        const x = i * (barW + gap);
+        const barHeight = data[i].value * multiplier;
+        const y = height - barHeight;
 
-//         ctx.fillStyle = data[i].color;
+        ctx.fillStyle = data[i].color;
 
-//         ctx.fillRect(x, y, barW, barHeight);
-//       }
-//     }
-//   }
-//   registerPaint('bar-chart', BarChartPainter);
+        ctx.fillRect(x, y, barW, barHeight);
+      }
+    }
+  }
+  registerPaint('bar-chart', BarChartPainter);
